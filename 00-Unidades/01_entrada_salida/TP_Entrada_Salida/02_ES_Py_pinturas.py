@@ -57,7 +57,7 @@ class App(customtkinter.CTk):
     def btn_convertir_f_c_on_click(self):
         temp_fahrenheit = float(self.txt_temperatura_f.get())
         temp_centigrados = (temp_fahrenheit - 32) * 5/9 
-        self.txt_temperatura_c.delete(0, tkinter.END)
+        self.txt_temperatura_f.delete(0, tkinter.END)
         self.txt_temperatura_c.insert(0, temp_centigrados)
         alert("Mensaje:", f"Esta es la temperatura en centigrados {temp_centigrados}°C")
     
