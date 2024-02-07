@@ -27,7 +27,12 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        dato = prompt("Ingresar Dato", "Por favor ingresar dato")
+        
+        if dato:
+            alert("Dato ingresado", f"El dato ingresado es: {dato}")
+        else:
+            alert("Error", "No se ingreso ningun dato")
         
         
     

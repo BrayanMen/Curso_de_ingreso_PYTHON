@@ -34,7 +34,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        contenido = prompt("Contenido", "Aqui el contenido:")
+        if contenido:
+            alert("Contenido", f"El contenido es: {contenido}")
+        else:
+            alert("Error", "No hay contenido")
                 
     
 if __name__ == "__main__":
