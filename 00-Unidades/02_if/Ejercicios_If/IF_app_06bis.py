@@ -12,7 +12,9 @@ Ejercicio: if_06bis
 ---
 Enunciado:
 
-A partir del ingreso de la altura en centímetros de un jugador de baloncesto, el programa deberá determinar la posición del jugador en la cancha, considerando los siguientes parametros:
+A partir del ingreso de la altura en centímetros de un jugador de baloncesto, 
+el programa deberá determinar la posición del jugador en la cancha, 
+considerando los siguientes parametros:
 
 Menos de 160 cm: Base
 Entre 160 cm y 179 cm: Escolta
@@ -39,10 +41,21 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-
+        altura = self.txt_altura.get()
         
+        altura = float(altura)
         
+        if  altura < 1.60:
+            alert("Mensaje","Es un Base.")
+            
+        if  altura >= 1.60 and altura < 1.80:
+            alert("Mensaje","Es un Escolta")
+            
+        if  altura >= 1.80 and altura < 2.00 :
+            alert("Mensaje","Es un Alero")
+            
+        if altura >= 2.00:
+            alert("Mensaje","Es un Ala-Pivot o un Pivot")
     
 if __name__ == "__main__":
     app = App()

@@ -11,7 +11,8 @@ apellido:
 Ejercicio: if_05
 ---
 Enunciado:
-Al presionar el botón 'Calcular', se deberá obtener el contenido de la caja de texto txtEdad, 
+Al presionar el botón 'Calcular', 
+se deberá obtener el contenido de la caja de texto txtEdad, 
 transformarlo en número e informar si la persona "NO ES ADOLESCENTE" utilizando el Dialog Alert.
 '''
 
@@ -33,7 +34,12 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edad = self.txt_edad.get()
+        
+        edad = int(edad)
+        
+        if edad >= 18 or edad < 13:
+            alert("Mensaje", "NO ES ADOLESCENTE")
 
         
         

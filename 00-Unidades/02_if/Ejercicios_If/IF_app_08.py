@@ -11,8 +11,11 @@ apellido:
 Ejercicio: if_08
 ---
 Enunciado:
-Al ingresar una edad menor a 18 años y un estado civil distinto a "Soltero", NO HACER NADA,
-pero si no es asi, y es soltero y no es menor, mostrar el siguiente mensaje: 'Es soltero y no
+Al ingresar una edad menor a 18 años y 
+un estado civil distinto a "Soltero", 
+NO HACER NADA,
+pero si no es asi, y es soltero y no es menor,
+mostrar el siguiente mensaje: 'Es soltero y no
 es menor.'
 '''
 
@@ -40,10 +43,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-
+        edad = self.txt_edad.get()
         
+        edad = int(edad)
         
+        estado_civil = self.combobox_estado_civil.get()
+        
+        if not (edad < 18 and estado_civil != "Soltero"):
+            if edad >= 18 and estado_civil == "Soltero":
+                alert("Mensaje", "Es soltero y no es menor")     
     
 if __name__ == "__main__":
     app = App()

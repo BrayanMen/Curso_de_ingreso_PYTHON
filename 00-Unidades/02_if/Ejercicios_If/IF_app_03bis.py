@@ -11,7 +11,8 @@ apellido:
 Ejercicio: if_03bis
 ---
 Enunciado:
-A partir del ingreso de la altura de un basquetbolista determinar si es pivot o no. Para serlo el mismo deberá medir mas de 1.80 metros
+A partir del ingreso de la altura de un basquetbolista determinar si es pivot o no. 
+Para serlo el mismo deberá medir mas de 1.80 metros
 '''
 
 
@@ -33,8 +34,12 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
-
+        estatura = self.txt_edad.get()
+        
+        estatura = float(estatura)
+        
+        if estatura >= 1.80:
+            alert("Mensaje", "PIVOT")
 
 if __name__ == "__main__":
     app = App()
