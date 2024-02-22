@@ -47,15 +47,14 @@ class App(customtkinter.CTk):
         
         if  altura < 1.60:
             alert("Mensaje","Es un Base.")
-            
-        if  altura >= 1.60 and altura < 1.80:
-            alert("Mensaje","Es un Escolta")
-            
-        if  altura >= 1.80 and altura < 2.00 :
-            alert("Mensaje","Es un Alero")
-            
-        if altura >= 2.00:
-            alert("Mensaje","Es un Ala-Pivot o un Pivot")
+        else:
+            if  altura >= 1.60 and altura < 1.80:
+                alert("Mensaje","Es un Escolta")
+            else:
+                if  altura >= 1.80 and altura < 2.00 :
+                    alert("Mensaje","Es un Alero")
+                else:
+                    alert("Mensaje","Es un Ala-Pivot o un Pivot")
     
 if __name__ == "__main__":
     app = App()

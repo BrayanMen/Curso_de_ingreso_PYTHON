@@ -48,11 +48,10 @@ class App(customtkinter.CTk):
         
         tipo_de_ciudadania = self.combobox_tipo.get()
         
-        if edad >=16 and tipo_de_ciudadania == "NATIVO":
+        if (edad >=16 and tipo_de_ciudadania == "NATIVO") or (edad >=18 and tipo_de_ciudadania == "NATURALIZADO"):
             alert("Mensaje", "Puede Votar")
-        if edad >=18 and tipo_de_ciudadania == "NATURALIZADO":
-            alert("Mensaje", "Puede Votar")
-        
+        else:
+            alert("Mensaje", "No puede Votar")        
     
 if __name__ == "__main__":
     app = App()

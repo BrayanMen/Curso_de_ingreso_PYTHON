@@ -36,10 +36,11 @@ class App(customtkinter.CTk):
         
         if nota >= 6:
             alert("Mensaje", f"Promoción directa, la nota es {nota}")
-        if nota < 6 and nota > 4:
-            alert("Mensaje", f"Aprobado, la nota es {nota}")
-        if nota < 4:
-            alert("Mensaje", f"Desaprobado, la nota es {nota}")           
+        else:
+            if nota < 6 and nota > 4:
+                alert("Mensaje", f"Aprobado, la nota es {nota}")
+            else:
+                alert("Mensaje", f"Desaprobado, la nota es {nota}")           
 
 if __name__ == "__main__":
     app = App()

@@ -60,8 +60,7 @@ class App(customtkinter.CTk):
         self.txt_temperatura_f.delete(0, tkinter.END)
         self.txt_temperatura_c.insert(0, temp_centigrados)
         alert("Mensaje:", f"Esta es la temperatura en centigrados {temp_centigrados}°C")
-    
-    
+     
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
