@@ -26,7 +26,23 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero = prompt("Ingresar", "Ingrese numero")
+       
+        numeros = ''
+        contador = 0
+        
+        for i in range(1,int(numero)):
+            es_primo=True
+            for j in range(2 , i):
+                if i % j == 0:
+                    es_primo = False
+                    break
+            if es_primo:
+                numeros += f"{i} "
+                contador += 1
+        
+        print(f"Los numeros primos son: {numeros}\nLa cantidad de primos son: {contador}") 
+                
     
 if __name__ == "__main__":
     app = App()
